@@ -1,6 +1,7 @@
 # clinicasegura/dominio/servicio.py
 from clinicasegura.dominio.modelos import Receta, Despacho
 from clinicasegura.dominio.errores import CadenaNoSoportada
+from datetime import timedelta
 
 class EmisionDeRecetas:
     def __init__(self, pasarelas: dict, reloj, folios, bitacora):
@@ -17,7 +18,8 @@ class EmisionDeRecetas:
         
         pasarela = self.pasarelas[cadena_lower]
         folio = self.folios.siguiente()
-        vence = self.reloj.ahora().isoformat() # o el formato correspondiente
+        fecha_base = self.reloj.ahora()
+        vence = fecha_base + timedelta(days=receta.dias)
         
         despacho = pasarela.enviar(receta, folio, vence)
         self.bitacora.registrar("EMISION", folio)

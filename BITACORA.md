@@ -105,22 +105,28 @@ MARCADOR DE LA PRÁCTICA · Principios de diseño
   SELLO: fc3f9032c796e601
 ```
 
-**Explicación:**
+**Explicación: Se rediseñó el orquestador del servicio (servicio.py:13) para eliminar los condicionales rígidos por nombre de cadena, integrando un registro dinámico (registro.py:3). Asimismo, se aseguró la portabilidad y configuración por entorno en arranque.py y se documentó formalmente el ciclo de vida y riesgo de las dependencias externas en el archivo DEPENDENCIAS.md. **
 
-**Sello:**
+**Sello: fc3f9032c796e601**
 
 ## Etapa 5 — Testabilidad
 
-**Predicción:**
+**Predicción: Al intentar emitir una receta con el servicio heredado, la ejecución fallará o requerirá un entorno real completo (red y base de datos), porque el código esta incompleto teniendo llamadas de forma incorrecta, haciendo que sucedan varios errores. **
 
 **Observación:**
 
 ```
+  MARCADOR DE LA PRÁCTICA · Principios de diseño                               
+  Emmanuel Blanco Alfaro   carné 2025077600
+  Etapa 5  Testabilidad [verde] verde
+  7 pruebas en verde · 0 por resolver
+  corrida #11 registrada
+  SELLO: 1caab80d9be316d6
 ```
 
 **Explicación:**
 
-**Sello:**
+**Sello: 1caab80d9be316d6 **
 
 ## Etapa 6 — Diseño defensivo
 
