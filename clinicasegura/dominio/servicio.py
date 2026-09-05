@@ -21,6 +21,12 @@ class EmisionDeRecetas:
         fecha_base = self.reloj.ahora()
         vence = fecha_base + timedelta(days=receta.dias)
         
-        despacho = pasarela.enviar(receta, folio, vence)
+        try:
+            despacho = pasarela.enviar(receta, folio, vence)
+        except Exception as e:
+            # Fallar rápido no significa fallar en silencio: deje rastro.
+            self.bitacora.registrar("FALLA_FARMACIA", folio)
+            from clinicasegura.dominio.errores import FarmaciaNoDisponible
+            raise FarmaciaNoDisponible(f"Falla en cadena: {cadena_lower} para folio: {folio}") from e
         self.bitacora.registrar("EMISION", folio)
         return despacho
