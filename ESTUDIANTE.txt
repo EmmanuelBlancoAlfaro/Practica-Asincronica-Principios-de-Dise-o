@@ -1,3 +1,3 @@
-Nombre:
-Carne:
-Grupo:
+Nombre: Emmanuel Blanco Alfaro
+Carne: 2025077600
+Grupo: 02
