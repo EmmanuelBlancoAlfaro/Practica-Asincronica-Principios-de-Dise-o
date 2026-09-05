@@ -124,7 +124,7 @@ MARCADOR DE LA PRÁCTICA · Principios de diseño
   SELLO: 1caab80d9be316d6
 ```
 
-**Explicación:**
+**Explicación: Se rediseñó el servicio para garantizar la testabilidad. Se implementó la carpeta mis_pruebas/ con pruebas personalizadas para validar escenarios de controlabilidad y observabilidad, incluyendo relojes fijos, manejo de errores por red y validación en el borde. **
 
 **Sello: 1caab80d9be316d6 **
 
