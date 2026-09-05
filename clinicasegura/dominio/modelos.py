@@ -18,5 +18,8 @@ class Receta:
 
 @dataclass(frozen=True)
 class Despacho:
+    folio: str
+    cadena: str
+    vence: str
     receta: Receta
     farmacia: str

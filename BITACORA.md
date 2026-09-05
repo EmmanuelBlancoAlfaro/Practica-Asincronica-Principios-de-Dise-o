@@ -73,16 +73,22 @@ MARCADOR DE LA PRÁCTICA · Principios de diseño
 
 ## Etapa 3 — Abstracción y reuso
 
-**Predicción:**
+**Predicción: Creo que se van a reducir a 0, ya que lo esperable sea que esto se reduja del todo. **
 
 **Observación:**
 
 ```
+  MARCADOR DE LA PRÁCTICA · Principios de diseño
+  Emmanuel Blanco Alfaro   carné 2025077600
+  Etapa 3  Abstracción y reuso [verde] verde
+  7 pruebas en verde · 0 por resolver
+  corrida #9 registrada
+  SELLO: 3f36e107f1c04ca0
 ```
 
-**Explicación:**
+**Explicación: Se establecieron los puertos del dominio usando typing.Protocol (puertos.py:2), aislando los detalles técnicos de infraestructura del núcleo del negocio. Además, se aplicó el principio de reusar lo existente implementando validaciones con expresiones regulares y folios seguros con uuid en la capa de aplicación (borde.py:9), logrando que el método de emisión devuelva un objeto estructurado de tipo Despacho. **
 
-**Sello:**
+**Sello:3f36e107f1c04ca0 **
 
 ## Etapa 4 — Flexibilidad, obsolescencia y portabilidad
 

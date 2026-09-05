@@ -1,5 +1,5 @@
 # clinicasegura/dominio/servicio.py
-from clinicasegura.dominio.modelos import Receta
+from clinicasegura.dominio.modelos import Receta, Despacho
 
 class EmisionDeRecetas:
     def __init__(self, tarifa_diaria: float, vigencia_dias: int):
@@ -7,6 +7,6 @@ class EmisionDeRecetas:
         self.tarifa_diaria = tarifa_diaria
         self.vigencia_dias = vigencia_dias
 
-    def emitir(self, receta: Receta):
+    def emitir(self, receta: Receta) -> Despacho:
         # Recibe un objeto Receta puro del dominio, no un diccionario crudo.
         pass
