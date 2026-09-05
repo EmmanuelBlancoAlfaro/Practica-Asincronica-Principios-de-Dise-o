@@ -1,10 +1,10 @@
 # clinicasegura/dominio/reglas.py
 
-def calcular_recargo(dias: int, tarifa_diaria: float, riesgo_alto: bool) -> float:
+def calcular_recargo(dias_restantes: int, tarifa_diaria: float, recargo_por_riesgo: bool) -> float:
     """
     Función pura que calcula el recargo de una receta.
     No llama a bases de datos ni lee configuraciones globales.
     """
-    if riesgo_alto:
-        return tarifa_diaria * dias * 2
-    return tarifa_diaria * dias
+    if recargo_por_riesgo:
+        return tarifa_diaria * dias_restantes * 2
+    return tarifa_diaria * dias_restantes

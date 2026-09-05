@@ -54,16 +54,22 @@ SELLO: 4fea7806ca5689e5
 
 ## Etapa 2 — Reducir el acoplamiento
 
-**Predicción:**
+**Predicción: Creo que pueden llegar a haber 3 lugares donde se llegue a cambiar el comportamiento del codigo si se cambia "vigencia_dias" a 1. **
 
 **Observación:**
 
 ```
+MARCADOR DE LA PRÁCTICA · Principios de diseño
+  Emmanuel Blanco Alfaro   carné 2025077600
+  Etapa 2  Acoplamiento [verde] verde
+  5 pruebas en verde · 0 por resolver
+  corrida #8 registrada
+  SELLO: b075b8937cd0d6c5
 ```
 
-**Explicación:**
+**Explicación: Se eliminó el acoplamiento común (estado global) inyectando la configuración a través del constructor de la clase (servicio.py:4). Además, se redujo el acoplamiento de estampado al definir una firma estrecha con tipos simples para la regla de negocio (reglas.py:3) y obligando al caso de uso a recibir un objeto de dominio inmutable en lugar de un diccionario crudo. **
 
-**Sello:**
+**Sello: b075b8937cd0d6c5**
 
 ## Etapa 3 — Abstracción y reuso
 
