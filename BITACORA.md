@@ -35,16 +35,22 @@ SELLO: 013b3ae0d31c40f1
 
 ## Etapa 1 — Dividir y conquistar, cohesión
 
-**Predicción:**
+**Predicción: Yo creo que se necesitarán 5 archivos más, porque al tener 6 funcionalidades en una sola clase, este se puede dividir en 5 clases diferentes. **
 
 **Observación:**
 
 ```
+MARCADOR DE LA PRÁCTICA · Principios de diseño
+Emmanuel Blanco Alfaro carné 2025077600
+Etapa 1  Dividir y conquistar · cohesión [verde] verde
+7 pruebas en verde · 0 por resolver
+corrida #3 registrada
+SELLO: 4fea7806ca5689e5
 ```
 
-**Explicación:**
+**Explicación: El rediseño eliminó la sobreacumulación de tareas al separar la clase ServicioRecetas en tres paquetes distintos. Se logró aislar el código aislando la lógica matemática en una función pura que no conoce de bases de datos ni redes(reglas.py:3), y se establecieron invariantes fuertes al usar tipos de datos inmutables con @dataclass(frozen=True) (modelos.py:5). **
 
-**Sello:**
+**Sello:4fea7806ca5689e5 **
 
 ## Etapa 2 — Reducir el acoplamiento
 
