@@ -70,7 +70,7 @@ Al inspeccionar clinicasegura/legado.py, el diccionario CONFIG se utiliza en mú
 
 **Explicación: Se establecieron los puertos del dominio usando typing.Protocol (puertos.py:2), aislando los detalles técnicos de infraestructura del núcleo del negocio. Además, se aplicó el principio de reusar lo existente implementando validaciones con expresiones regulares y folios seguros con uuid en la capa de aplicación (borde.py:9), logrando que el método de emisión devuelva un objeto estructurado de tipo Despacho. **
 
-**Sello:3f36e107f1c04ca0 **
+**Sello:1472b7d93be3d92b **
 
 ## Etapa 4 — Flexibilidad, obsolescencia y portabilidad
 

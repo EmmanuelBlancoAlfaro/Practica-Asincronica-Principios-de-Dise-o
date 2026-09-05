@@ -1,6 +1,7 @@
 # clinicasegura/arranque.py
 import os
 from clinicasegura.dominio.servicio import EmisionDeRecetas
+from clinicasegura.infraestructura import folios
 from clinicasegura.infraestructura.registro import construir_registro
 
 def construir_servicio() -> EmisionDeRecetas:
@@ -8,4 +9,4 @@ def construir_servicio() -> EmisionDeRecetas:
     pasarelas = []
     registro = construir_registro(pasarelas)
 
-    return EmisionDeRecetas(pasarelas=registro, reloj=None, folios=None, bitacora=None)
+    return EmisionDeRecetas(pasarelas=registro, reloj=None, folios=folios, bitacora=None)
