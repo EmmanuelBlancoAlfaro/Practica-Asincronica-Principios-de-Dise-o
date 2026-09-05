@@ -17,15 +17,21 @@ Carné:
 ## Etapa 0 — Diagnóstico
 
 **Predicción:**
-
+Yo creo que esta violando todos los principios
 **Observación:**
 
 ```
+MARCADOR DE LA PRÁCTICA · Principios de diseño
+Emmanuel Blanco Alfaro carné 2025077600
+Etapa 0 Diagnóstico [verde] verde
+4 pruebas en verde · 0 por resolver
+corrida #2 registrada
+SELLO: 013b3ae0d31c40f1
 ```
 
-**Explicación:**
+**Explicación: Al completar y explicar el porque estaban mal aplicados todos los principios en el archivo "DIAGNOSTICO.md" con sus evidencias y que puede suceder si no se corrige, se completo de manera existosa la etapa 0, colocando la etapa 0 en verde. **
 
-**Sello:**
+**Sello: 013b3ae0d31c40f1**
 
 ## Etapa 1 — Dividir y conquistar, cohesión
 
