@@ -1,12 +1,24 @@
 # clinicasegura/dominio/servicio.py
 from clinicasegura.dominio.modelos import Receta, Despacho
+from clinicasegura.dominio.errores import CadenaNoSoportada
 
 class EmisionDeRecetas:
-    def __init__(self, tarifa_diaria: float, vigencia_dias: int):
+    def __init__(self, pasarelas: dict, reloj, folios, bitacora):
         # La configuración se recibe por el constructor y se guarda como estado de la instancia.
-        self.tarifa_diaria = tarifa_diaria
-        self.vigencia_dias = vigencia_dias
+        self.pasarelas = pasarelas
+        self.reloj = reloj
+        self.folios = folios
+        self.bitacora = bitacora
 
-    def emitir(self, receta: Receta) -> Despacho:
-        # Recibe un objeto Receta puro del dominio, no un diccionario crudo.
-        pass
+    def emitir(self, receta: Receta, cadena: str) -> Despacho:
+        cadena_lower = cadena.lower()
+        if cadena_lower not in self.pasarelas:
+            raise CadenaNoSoportada(cadena)
+        
+        pasarela = self.pasarelas[cadena_lower]
+        folio = self.folios.siguiente()
+        vence = self.reloj.ahora().isoformat() # o el formato correspondiente
+        
+        despacho = pasarela.enviar(receta, folio, vence)
+        self.bitacora.registrar("EMISION", folio)
+        return despacho

@@ -92,11 +92,17 @@ MARCADOR DE LA PRÁCTICA · Principios de diseño
 
 ## Etapa 4 — Flexibilidad, obsolescencia y portabilidad
 
-**Predicción:**
+**Predicción: Se va a romper todo, porque como se vio anteriormente si se agregaba una farmacia se tenia que modificar el codigo o el método emitir. **
 
 **Observación:**
 
 ```
+  MARCADOR DE LA PRÁCTICA · Principios de diseño
+  Emmanuel Blanco Alfaro   carné 2025077600
+  Etapa 4  Flexibilidad · obsolescencia · portabilidad [verde] verde
+  7 pruebas en verde · 0 por resolver
+  corrida #10 registrada
+  SELLO: fc3f9032c796e601
 ```
 
 **Explicación:**

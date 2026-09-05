@@ -12,6 +12,7 @@ class Cedula:
 @dataclass(frozen=True)
 class Receta:
     cedula: Cedula
+    medicamento: str
     dias: int
     dosis_mg: float
     riesgo_alto: bool = False
@@ -21,5 +22,5 @@ class Despacho:
     folio: str
     cadena: str
     vence: str
-    receta: Receta
-    farmacia: str
+    receta: Receta = None
+    farmacia: str = ""
